@@ -30,11 +30,10 @@ def hebb_train(data):
     return weight_matrix
 
 # Hebb回忆过程
-def recall(weight_matrix, input_image, iterations=5):
+def recall(weight_matrix, input_image):
     input_vector = flatten_image(input_image)
-    for _ in range(iterations):
-        output = np.dot(weight_matrix, input_vector)  # W * vec_input
-        output_vector = np.sign(output)  # 将输出二值化为1、-1
+    output = np.dot(weight_matrix, input_vector)  # W * vec_input
+    output_vector = np.sign(output)  # 将输出二值化为1、-1
     return output_vector.reshape(len(input_image), len(input_image[0]))
 
 # 测试函数，展示图片

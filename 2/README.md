@@ -12,6 +12,9 @@
 
 实现PCA算法
 
+`2_Oja_PCA.ipynb`
+实现Oja's PCA学习算法
+
 `Lena.bmp`
 
 Lena灰度图
